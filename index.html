@@ -114,17 +114,13 @@
 </head>
 <body class="antialiased">
     <div id="app" class="container mx-auto px-4 py-8 max-w-5xl">
-        <header class="flex justify-between items-start mb-8">
-            <div>
-                <h3 class="text-xl md:text-xl font-bold mb-2">제4부 포스트휴먼 사회에서의 <strong class="keyword-orange">학교교육과정</strong>의 변화</h3>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-2">9장 학교지식 인식론의 전환</h2>
-                <p class="text-lg mt-2"><strong class="keyword-teal">인본주의</strong>를 넘어 <strong class="keyword-orange">포스트휴먼 경험</strong>으로의 여정</p>
-            </div>
-            <div class="text-right flex-shrink-0 ml-4">
-                <p class="font-bold mt-2">발표자 : 202462304 박정교</p>
-                <div class="mt-2">
-                    <img id="adjustable-image" src="https://ivy-rugby-daf.notion.site/image/attachment%3A3a199f97-f1d4-405b-856d-1eb38e8402f2%3A%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-2025-10-10-214714.svg?table=block&id=2883ec20-06d9-802c-8879-f10a58613375&spaceId=a57f2ff5-0671-465c-bf6a-c699bdf0fd16&userId=&cache=v2" alt="Diagram Image" class="ml-auto" style="width: 140px; height: auto;">
-                </div>
+        <header class="text-center mb-8">
+            <h3 class="text-xl md:text-xl font-bold mb-2">제4부 포스트휴먼 사회에서의 <strong class="keyword-orange">학교교육과정</strong>의 변화</h3><br>
+            <h2 class="text-3xl md:text-4xl font-bold mb-2">9장 학교지식 인식론의 전환</h2>
+            <p class="text-lg"><br><strong class="keyword-teal">인본주의</strong>를 넘어 <strong class="keyword-orange">포스트휴먼 경험</strong>으로의 여정</p>
+            <p class="text-right font-bold mt-4">발표자 : 202462304 박정교</p>
+            <div class="mt-2 flex justify-end">
+                <img id="adjustable-image" src="https://ivy-rugby-daf.notion.site/image/attachment%3A3a199f97-f1d4-405b-856d-1eb38e8402f2%3A%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-2025-10-10-214714.svg?table=block&id=2883ec20-06d9-802c-8879-f10a58613375&spaceId=a57f2ff5-0671-465c-bf6a-c699bdf0fd16&userId=&cache=v2" alt="Diagram Image" class="" style="width: 140px; height: auto;">
             </div>
         </header>
 
@@ -444,7 +440,7 @@
                                 <span class="text-gray-500 text-2xl transform transition-transform duration-300">▼</span>
                             </div>
                             <div class="details mt-4">
-                                <img id="snu-img-thumb" src="https://ivy-rugby-daf.notion.site/image/attachment%3A2b9836a1-debe-4d5c-ad57-17f4b5dd594a%3A%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2025-11-10_014122.png?table=block&id=2a63ec20-06d9-804c-ba34-d231c3fa6e3a&spaceId=a57f2ff5-0671-465c-bf6a-c699bdf0fd16&width=1420&userId=&cache=v2" alt="2028 서울대학교 입학전형" class="cursor-pointer w-full rounded-md shadow-md">
+                                <img id="snu-img-thumb" src="https://ivy-rugby-daf.notion.site/image/attachment%3A2b9836a1-debe-4d5c-ad57-17f4b5dd594a%3A%EC%8A%A4%ED%S%B0%EB%A6%B0%EC%83%B7_2025-11-10_014122.png?table=block&id=2a63ec20-06d9-804c-ba34-d231c3fa6e3a&spaceId=a57f2ff5-0671-465c-bf6a-c699bdf0fd16&width=1420&userId=&cache=v2" alt="2028 서울대학교 입학전형" class="cursor-pointer w-full rounded-md shadow-md">
                             </div>
                         </li>
                         <li class="expandable cursor-pointer">
@@ -616,10 +612,10 @@
 
             // --- Gemini API Integration ---
 
-            const apiKey = "AIzaSyDp3L9VD3aH_Dk5rx0TB2dIWxymKuKWnao"; // API 키는 Canvas 환경에서 자동으로 제공됩니다.
+            const apiKey = "AIzaSyAvzAJ1YR-nlgTIinhHapo18lJM5X5oPx8"; // API 키는 Canvas 환경에서 자동으로 제공됩니다.
 
             async function callGeminiAPI(prompt, systemInstruction = "") {
-                const model = 'gemini-2.5-flash-preview-05-20';
+                const model = 'gemini-2.5-flash-preview-09-2025';
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
                 const payload = {
@@ -780,5 +776,4 @@
         });
     </script>
 </body>
-
 </html>
