@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9장 학교지식 인식론의 전환</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chosen Palette: Warm Neutrals & Slate Blue --><!-- Application Structure Plan: 이 애플리케이션은 보고서의 선형적인 슬라이드 구조를 탈피하여, 사용자가 핵심 주제(전통적 지식 비판, 20세기 인식론의 한계, 새로운 대안, 결론)를 자유롭게 탐색할 수 있는 주제별 대시보드 형태로 설계되었습니다. 상단 탐색 메뉴를 통해 각 주제로 즉시 이동할 수 있으며, 각 섹션 내에서는 클릭 가능한 카드와 다이어그램을 통해 정보를 단계적으로 발견할 수 있습니다. 이러한 구조는 복잡한 철학적 개념들을 한 번에 보여주기보다 사용자의 상업작용에 따라 점진적으로 제시하여 정보 과부하를 줄이고, 개념 간의 관계를 더 쉽게 파악하도록 돕기 위해 선택되었습니다. --><!-- Visualization & Content Choices: 보고서의 내용이 텍스트 중심의 개념 설명이므로, 데이터 시각화 차트 대신 개념의 구조와 관계를 보여주는 데 중점을 두었습니다. 1) 전통적 지식 비판: 3가지 관점을 나란히 배치된 카드로 제시하여 비교/탐색을 용이하게 했습니다(HTML/CSS/JS). 2) 20세기 인식론의 한계: 각 인식론(본질주의 등)과 그에 대한 비판을 연결된 카드로 구성하여 '이론과 반론' 구조를 명확히 했습니다(HTML/CSS/JS). 3) 비대표성이론: 핵심 개념과 하위 이론들의 관계를 시각적인 다이어그램 형태로 구현하여 복잡한 이론적 관계를 직관적으로 이해할 수 있게 했습니다(HTML/CSS/JS). 4) 결론: 인본주의와 포스트휴먼 경험의 차이점을 명확하게 보여주기 위해 비교 테이블을 사용했습니다(HTML). 이 모든 방식은 텍스트를 시각적, 공간적으로 재구성하여 사용자의 이해를 돕는 것을 목표로 합니다. --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><style>
+    <style>
         body {
             font-family: 'Pretendard', sans-serif;
-            background-color: #F8F6F2; /* 변경 */
-            color: #3D3D3D; /* 변경 */
+            background-color: #F8F6F2;
+            color: #3D3D3D;
         }
         .nav-item {
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
         }
         .nav-item.active, .nav-item:hover {
-            color: #C87A4B; /* 변경 */
-            border-bottom-color: #C87A4B; /* 변경 */
+            color: #C87A4B;
+            border-bottom-color: #C87A4B;
         }
         .content-section {
             display: none;
@@ -27,7 +27,7 @@
         }
         .card {
             background-color: #FFFFFF;
-            border: 1px solid #EAE8E4; /* 변경 */
+            border: 1px solid #EAE8E4;
             border-radius: 0.75rem;
             padding: 1.5rem;
             transition: all 0.3s ease;
@@ -38,7 +38,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.07);
         }
         .card-title {
-            color: #3D3D3D; /* 변경 */
+            color: #3D3D3D;
             font-weight: 600;
         }
         .expandable .details {
@@ -47,7 +47,7 @@
             transition: max-height 0.5s ease-out;
         }
         .expandable.open .details {
-            max-height: 1000px; /* 이미지 높이를 위해 충분히 늘림 */
+            max-height: 1000px;
         }
         .tag {
             background-color: #E2E8F0;
@@ -612,7 +612,8 @@
 
             // --- Gemini API Integration ---
 
-            const apiKey = "AIzaSyDp3L9VD3aH_Dk5rx0TB2dIWxymKuKWnao"; // API 키는 Canvas 환경에서 자동으로 제공됩니다.
+            // ★ 중요: 여기에 실제 키를 넣지 마세요! Netlify가 주입해줍니다.
+            const apiKey = window.NETLIFY_GEMINI_KEY; 
 
             async function callGeminiAPI(prompt, systemInstruction = "") {
                 const model = 'gemini-2.5-flash-preview-09-2025';
@@ -777,4 +778,3 @@
     </script>
 </body>
 </html>
-
